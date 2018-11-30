@@ -1,0 +1,51 @@
+/**index.wxss**/
+.header,.item {
+  height: 60rpx;
+  padding: 20rpx;
+  box-shadow: 0 0 5rpx #e0e0e0;
+  border-radius: 10rpx;
+  display: flex;
+}
+.header {
+  margin: 20rpx;
+  border: 1rpx solid #e0e0e0;
+}
+.item {
+  margin: 0rpx 20rpx;
+  border: 3rpx solid #e0e0e0;
+}
+.addIcon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /*水平居中*/
+}
+.emptyText1 {
+  font-size: 60rpx;
+  margin-top: 200rpx;
+  margin-bottom: 40rpx;
+}
+.footer {
+  margin: 20rpx;
+  display: flex;
+}
+.toggleAll,.summary,.clearCompleted {
+  font-size: 35rpx;
+  color: #aaa;
+  flex: 1;
+}
+.summary {
+  text-align: right;
+}
+.listItemName {
+  width: 90%;
+  font-size: 40rpx;
+  margin:0 10rpx;
+}
+.linethrough {
+  text-decoration: line-through;
+}

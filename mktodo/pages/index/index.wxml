@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='header'>
+    <image class='addIcon' src='../../assets/plus.png' bindtap='addTask'></image>
+    <input class='itemName' placeholder='Anything else' value='{{taskName}}' bindinput='inputchange'></input>
+  </view>
+  <view class='body'>
+    <block wx:if="{{itemsArr.length > 0}}">
+      <view class='item' wx:for="{{itemsArr}}" wx:key="key">
+        <icon type='{{item.completed ? "success" : "circle"}}' bindtap='toggleItem' data-index='{{index}}'></icon>
+        <text class='listItemName {{item.completed ? "linethrough" : ""}}'>{{item.name}}</text>
+        <icon type='clear'class="clear" bindtap='deleteItem' data-index='{{index}}'></icon>  
+      </view>
+      <view class='footer'>
+        <text class='clearCompleted' wx:if="{{clearFlag}}" bindtap='clearCompleted'>clear Completed</text>
+        <text class='summary'>{{itemsArr.length}} item<text wx:if="{{itemsArr.length > 1}}">s</text> left</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='empty'>
+        <text class='emptyText1'>Congratrulations!</text>
+        <text class='emptyText2'>You have nothing to do</text>
+      </view>
+    </block>
+  </view>
+</view>

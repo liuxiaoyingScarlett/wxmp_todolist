@@ -1,0 +1,10 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class='item' wx:for="{{log}}" wx:key="key">
+    <view class='left'>
+      <view class='itemName'>Name:{{item.name}}</view>
+      <view class='timestamp'>{{item.time}}</view>
+    </view>
+    <view class='operation'>{{item.operation}}</view>
+  </view>
+</view>
